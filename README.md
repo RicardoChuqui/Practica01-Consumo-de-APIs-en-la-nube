@@ -21,5 +21,7 @@ Tambien se usa la plantilla de Bootstrap para darle estilos a nuestra pagina web
 ![Imagen6](https://user-images.githubusercontent.com/49218960/114499471-c0406e80-9beb-11eb-9cf1-62774e2c093b.png)
 
 CONCLUSIONES:
+
+//
 •	El desarrollo de la practica fue de suma importancia ya que al aprender a consumir datos de una API encontramos varios métodos útiles y nos ayuda a entender mejor el lenguaje JSON en el que dichos datos están establecidos.
 •	También es de suma importancia aprender a usar APIs ya que esto nos facilita mucho trabajo al momento de desarrollar una aplicación web, también se debe tomar en cuenta que la programación implementada sea algo sencilla y fácil de elaborar para eso es importante conocer JavaScript que nos permite incorporar métodos muy sencillos y fáciles de implementar
