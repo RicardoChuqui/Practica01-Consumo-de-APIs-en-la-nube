@@ -26,7 +26,7 @@
             <div class="col-auto" >
              <i class="fas fa-search h4 text-body"></i>
              </div>
-             <!--Para dar un mejor diseño a nustro input de buscador-->
+             <!--Para dar un mejor diseÃ±o a nustro input de buscador-->
              <div class="col p-3 mb-2 bg-info text-dark rounded border border-danger">
                   <input type="text" class="search" class="form-control form-control-lg form-control-borderless"  placeholder="Nombres" aria-label="Search"
                   aria-describedby="search-addon">
@@ -42,7 +42,7 @@
         </div>
             <div class="mt-5">
                 <!--Se crea una tabla para recuperar los siguintes datos -->
-                <!--Tambien se da un diseño a la tabla-->
+                <!--Tambien se da un diseÃ±o a la tabla-->
                 <table  class="table table-striped table-bordered" >
                     <thead>
                         <tr class="suggestions">
@@ -72,26 +72,27 @@
         .then(blob => blob.json())
         .then(data => name.push(...data));
 //
-        function buscar( name) {
-        return name.filter(place => {
-            return place.name.match(regex);
+           function buscar(palabra,  name) {
+        return name.filter(datos => {
+            const res = new RegExp(palabra, 'gi');
+            return datos.name.match(res);
         });
     }
 
     function mostrar(e) {
         const matchedArray = buscar(e.target.value, name);
         contenido.innerHTML = ''
-        const html = matchedArray.map(place => {
+        const html = matchedArray.map(datos => {
             contenido.innerHTML += 
             `
           
                     <tr>
-                   <th scope="row">${ place.id }</th>
-                   <td> ${place.name}</td>
-                   <td> ${place.username}</td>
-                    <td> ${place.address.zipcode} </td>
-                    <td> ${place.email} </td>
-                    <td> ${place.address.city} </td>
+                   <th scope="row">${ datos.id }</th>
+                   <td> ${datos.name}</td>
+                   <td> ${datos.username}</td>
+                    <td> ${datos.address.zipcode} </td>
+                    <td> ${datos.email} </td>
+                    <td> ${datos.address.city} </td>
                 </tr>
                
             `
