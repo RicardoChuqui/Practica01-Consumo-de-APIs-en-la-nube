@@ -71,14 +71,14 @@
     fetch(url)
         .then(blob => blob.json())
         .then(data => name.push(...data));
-//
+//Buscar la palabra que conincida mediante un filtro
            function buscar(palabra,  name) {
         return name.filter(datos => {
             const res = new RegExp(palabra, 'gi');
             return datos.name.match(res);
         });
     }
-
+//Mostrar el resultado de la busqueda eso en una tabla
     function mostrar(e) {
         const matchedArray = buscar(e.target.value, name);
         contenido.innerHTML = ''
@@ -99,7 +99,7 @@
         }).join('');
        
     }
-
+//Usamos el metodo selector para realizar la busqueda y mostrar en tiempo real todos los datos optenidos
     const search = document.querySelector('.search');
     search.addEventListener('change', mostrar);
     search.addEventListener('keyup', mostrar);
