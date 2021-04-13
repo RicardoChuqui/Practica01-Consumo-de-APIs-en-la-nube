@@ -62,7 +62,15 @@
             </div>
         
     <script>
-    
+   //Se recupera del array los resultados selecionados      
+    var contenido = document.querySelector('#contenido')
+    //Url de la API para realizar esta practica aqui puede afregar la api con la que desee trabajar
+    const url= 'https://jsonplaceholder.typicode.com/users/';
+    const resul = [];
+//Fetch para poder realizar busquedas en http que se encuentra en una api web los datos en formato json 
+    fetch(url)
+        .then(blob => blob.json())
+        .then(data => resul.push(...data));
 
 
 
