@@ -66,26 +66,42 @@
     var contenido = document.querySelector('#contenido')
     //Url de la API para realizar esta practica aqui puede afregar la api con la que desee trabajar
     const url= 'https://jsonplaceholder.typicode.com/users/';
-    const resul = [];
+    const name = [];
 //Fetch para poder realizar busquedas en http que se encuentra en una api web los datos en formato json 
     fetch(url)
         .then(blob => blob.json())
-        .then(data => resul.push(...data));
+        .then(data => name.push(...data));
+//
+        function buscar( name) {
+        return name.filter(place => {
+            return place.name.match(regex);
+        });
+    }
 
+    function mostrar(e) {
+        const matchedArray = buscar(e.target.value, name);
+        contenido.innerHTML = ''
+        const html = matchedArray.map(place => {
+            contenido.innerHTML += 
+            `
+          
+                    <tr>
+                   <th scope="row">${ place.id }</th>
+                   <td> ${place.name}</td>
+                   <td> ${place.username}</td>
+                    <td> ${place.address.zipcode} </td>
+                    <td> ${place.email} </td>
+                    <td> ${place.address.city} </td>
+                </tr>
+               
+            `
+        }).join('');
+       
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const search = document.querySelector('.search');
+    search.addEventListener('change', mostrar);
+    search.addEventListener('keyup', mostrar);
 
 </script>
 </body>
