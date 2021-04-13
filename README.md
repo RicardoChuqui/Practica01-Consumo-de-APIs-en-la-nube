@@ -9,7 +9,8 @@
 
 ![Imagen2](https://user-images.githubusercontent.com/49218960/114499413-a737bd80-9beb-11eb-93e0-c728bba7530f.png)
 
-3. El codigo implementado cabe destacar que todo el codigo esta documentado para saber que se usa en el desarrollo de esta aplicacion 
+3. El codigo implementado cabe destacar que todo el codigo esta documentado para saber que se usa en el desarrollo de esta aplicacion.
+Tambien se usa la plantilla de Bootstrap para darle estilos a nuestra pagina web ya que por medio de esta plantilla podemos usar los metodos CSS que vienen ya definidos en la misma y asi solo lo adaptamos en nuestro proyecto.
 ![Imagen3](https://user-images.githubusercontent.com/49218960/114499436-b454ac80-9beb-11eb-954c-5f89ba02c1f0.png)
 
 4. Resultados optenidos de la aplicacion con el metodo buscar con el parametro nombre 
